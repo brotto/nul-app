@@ -28,7 +28,7 @@ export default function SafetyPage() {
       <h2>2. Denuncia no app</h2>
       <p>
         Usuarios podem denunciar conteudos, contas e interacoes diretamente no aplicativo em opcoes de menu como
-        "Denunciar" e "Bloquear". Tambem aceitamos denuncias por email em {company.supportEmail}, com links, prints
+        &quot;Denunciar&quot; e &quot;Bloquear&quot;. Tambem aceitamos denuncias por email em {company.supportEmail}, com links, prints
         ou IDs de projeto para analise.
       </p>
 

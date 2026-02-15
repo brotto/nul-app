@@ -43,7 +43,7 @@ export default function CookiesPage() {
       <div className={sectionClass}>
         <h2 className="text-2xl font-semibold">4. Como gerenciar preferencias</h2>
         <p className={textClass}>
-          Voce pode aceitar, rejeitar ou gerenciar categorias nao essenciais no banner de cookies (botao "Gerenciar"). Para revisar
+          Voce pode aceitar, rejeitar ou gerenciar categorias nao essenciais no banner de cookies (botao &quot;Gerenciar&quot;). Para revisar
           preferencias, limpe os cookies locais do navegador e recarregue a pagina.
         </p>
         <p className={textClass}>

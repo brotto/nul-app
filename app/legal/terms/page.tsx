@@ -86,7 +86,7 @@ export default function TermsPage() {
       <div className={sectionClass}>
         <h2 className="text-2xl font-semibold">9. Isencao de garantias</h2>
         <p className={textClass}>
-          O NUL e fornecido "como esta" e "conforme disponivel", sem garantias de disponibilidade ininterrupta, ausencia
+          O NUL e fornecido &quot;como esta&quot; e &quot;conforme disponivel&quot;, sem garantias de disponibilidade ininterrupta, ausencia
           de erros ou adequacao a objetivos especificos.
         </p>
       </div>
