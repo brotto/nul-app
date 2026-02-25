@@ -3,64 +3,55 @@ import Link from "next/link";
 import { company } from "@/app/lib/content";
 
 export const metadata: Metadata = {
-  title: "Seguranca e UGC | NUL",
-  description: "Politica de seguranca, moderacao e conteudo gerado por usuarios no NUL."
+  title: "Safety & UGC | NUL",
+  description: "Safety policy, content moderation, and user-generated content guidelines for NUL."
 };
 
 export default function SafetyPage() {
   return (
     <section className="section-shell prose prose-invert max-w-4xl prose-headings:text-text prose-p:text-muted prose-li:text-muted">
-      <h1>Seguranca e Conteudo Gerado por Usuarios (UGC)</h1>
+      <h1>Safety & User-Generated Content (UGC)</h1>
       <p>
-        Esta politica descreve como o NUL previne abuso, processa denuncias e protege a comunidade. Contato para
-        denuncias e seguranca: <strong>{company.supportEmail}</strong>.
+        This policy describes how NUL prevents abuse, processes reports, and protects our community. Contact for reports and safety: <strong>{company.supportEmail}</strong>.
       </p>
 
-      <h2>1. Conteudo proibido</h2>
+      <h2>1. Prohibited Content</h2>
       <ul>
-        <li>Discurso de odio, assedio, ameacas ou intimidacao.</li>
-        <li>Violencia extrema, incentivo a dano fisico ou atividades ilegais.</li>
-        <li>Exploracao sexual, incluindo qualquer material envolvendo menores.</li>
-        <li>Conteudo sexual explicito nao permitido pelas diretrizes da plataforma.</li>
-        <li>Fraude, phishing, engenharia social ou violacao de propriedade intelectual.</li>
+        <li>Hate speech, harassment, threats, or intimidation.</li>
+        <li>Extreme violence, incitement to physical harm, or illegal activities.</li>
+        <li>Sexual exploitation, including any material involving minors.</li>
+        <li>Sexually explicit content not permitted by platform guidelines.</li>
+        <li>Fraud, phishing, social engineering, or intellectual property violations.</li>
       </ul>
 
-      <h2>2. Denuncia no app</h2>
+      <h2>2. Reporting</h2>
       <p>
-        Usuarios podem denunciar conteudos, contas e interacoes diretamente no aplicativo em opcoes de menu como
-        &quot;Denunciar&quot; e &quot;Bloquear&quot;. Tambem aceitamos denuncias por email em {company.supportEmail}, com links, prints
-        ou IDs de projeto para analise.
+        Users can report content, accounts, and interactions directly within the App. We also accept reports via email at {company.supportEmail}, including links, screenshots, or project IDs for review.
       </p>
 
-      <h2>3. Analise e resposta</h2>
+      <h2>3. Review and Response</h2>
       <p>
-        Denuncias sao avaliadas com prioridade, combinando filtros automaticos e revisao humana quando necessario. O
-        tempo de resposta pode variar por complexidade e volume, sem SLA rigido.
+        Reports are reviewed with priority, combining automated filters and human review when necessary. Response time may vary by complexity and volume.
       </p>
 
-      <h2>4. Bloqueio de usuarios e remocao</h2>
+      <h2>4. Account Actions</h2>
       <p>
-        Podemos remover conteudo, limitar recursos, suspender ou encerrar contas que violem esta politica, os
-        <Link href="/legal/terms"> Termos de Uso</Link> ou leis aplicaveis.
+        We may remove content, restrict features, suspend, or terminate accounts that violate this policy, our <Link href="/legal/terms">Terms of Service</Link>, or applicable laws.
       </p>
 
-      <h2>5. Filtragem tecnica</h2>
+      <h2>5. Automated Filtering</h2>
       <p>
-        O NUL usa mecanismos de deteccao automatica para categorias de risco e aplica revisao manual em casos
-        sensiveis. Melhoramos continuamente os modelos para reduzir falsos positivos e negativos.
+        NUL uses automated detection mechanisms for risk categories and applies manual review in sensitive cases. We continuously improve our models to reduce false positives and negatives.
       </p>
 
-      <h2>6. Menores e classificacao etaria</h2>
+      <h2>6. Minors and Age Ratings</h2>
       <p>
-        O NUL nao e direcionado a criancas. Para creator content que possa exceder determinada faixa etaria, exigimos
-        classificacao do conteudo pelo usuario no envio/publicacao e aplicamos restricoes de acesso conforme idade
-        declarada ou verificada quando disponivel.
+        NUL is not directed at children. The App requires users to be at least 17 years old. Content that may exceed certain age thresholds may be subject to additional restrictions.
       </p>
 
-      <h2>7. Contato de seguranca e formulario</h2>
+      <h2>7. Safety Contact</h2>
       <p>
-        Canal principal: {company.supportEmail}. Formulario de suporte pode ser solicitado pelo mesmo email para casos
-        com anexos extensos.
+        Primary channel: {company.supportEmail}. For reports requiring attachments, contact us via email and we will provide a secure submission method.
       </p>
     </section>
   );

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { company, legalEffectiveDate } from "@/app/lib/content";
 
 export const metadata: Metadata = {
-  title: "Termos de Uso | NUL",
-  description: "Termos de Uso do NUL, incluindo UGC, assinaturas e limites de responsabilidade."
+  title: "Terms of Service | NUL",
+  description: "Terms of Service for NUL, including credits, subscriptions, acceptable use, and liability."
 };
 
 const sectionClass = "mt-8 space-y-3";
@@ -13,112 +13,122 @@ const textClass = "text-sm text-muted leading-7";
 export default function TermsPage() {
   return (
     <section className="section-shell max-w-4xl">
-      <h1 className="text-4xl font-semibold">Termos de Servico (Terms of Service)</h1>
-      <p className="mt-4 text-sm text-muted">Data de vigencia: {legalEffectiveDate}</p>
-      <p className="mt-2 text-sm text-muted">Historico de alteracoes: versao inicial publicada em {legalEffectiveDate}.</p>
+      <h1 className="text-4xl font-semibold">Terms of Service</h1>
+      <p className="mt-4 text-sm text-muted">Effective date: {legalEffectiveDate}</p>
+      <p className="mt-2 text-sm text-muted">Version history: initial version published on {legalEffectiveDate}.</p>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">1. Aceitacao e elegibilidade</h2>
+        <h2 className="text-2xl font-semibold">1. Acceptance of Terms</h2>
         <p className={textClass}>
-          Ao acessar ou usar o NUL, voce concorda com estes Termos. Voce declara ter capacidade legal para contratar e
-          cumprir as leis aplicaveis. Se usar o app em nome de empresa, declara ter poderes para vincula-la.
+          By creating an account and using NUL (&quot;the App&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you do not agree, do not use the App.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">2. Conta e seguranca</h2>
+        <h2 className="text-2xl font-semibold">2. Description of Service</h2>
         <p className={textClass}>
-          Voce e responsavel por manter credenciais seguras, pela veracidade dos dados da conta e por todas as
-          atividades realizadas no login. Notifique imediatamente qualquer uso nao autorizado pelo email {company.supportEmail}.
+          NUL is a premium AI-powered creative platform that enables users to generate videos, images, music, and audio using state-of-the-art artificial intelligence models. Content is generated on-demand using a credit-based system.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">3. Licenca de uso do app</h2>
+        <h2 className="text-2xl font-semibold">3. Account and Authentication</h2>
         <p className={textClass}>
-          Concedemos licenca limitada, pessoal, revogavel, nao exclusiva e intransferivel para uso do NUL conforme estes
-          Termos e regras da App Store.
+          You must sign in with your Apple ID to use the App. You are responsible for all activity under your account. You must be at least 17 years old to use this App.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">4. Conteudo do usuario</h2>
+        <h2 className="text-2xl font-semibold">4. Credits and Payments</h2>
         <p className={textClass}>
-          Voce mantem os direitos sobre conteudos enviados e gerados, na extensao permitida por lei. Para operar o
-          servico, voce concede ao NUL licenca mundial, nao exclusiva e limitada para hospedar, processar, reproduzir e
-          exibir esse conteudo durante a prestacao do servico, suporte e seguranca.
+          Credits are purchased through Apple In-App Purchases and are subject to Apple&apos;s payment terms. Credits are non-refundable once used for content generation. Subscription plans provide monthly credit allowances and bonus multipliers as described at the time of purchase. Unused subscription credits do not roll over to the next billing period. All prices are in USD and may vary by region per Apple&apos;s pricing tiers.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">5. Condutas e conteudos proibidos</h2>
+        <h2 className="text-2xl font-semibold">5. Acceptable Use</h2>
+        <p className={textClass}>You agree NOT to use the App to generate content that:</p>
+        <ul className="list-disc pl-6 text-sm text-muted leading-7 space-y-1">
+          <li>Contains nudity, pornography, or sexually explicit material;</li>
+          <li>Promotes violence, terrorism, or self-harm;</li>
+          <li>Contains hate speech, discrimination, or harassment;</li>
+          <li>Infringes on third-party intellectual property or copyrights;</li>
+          <li>Depicts real individuals without their consent;</li>
+          <li>Violates any applicable law or regulation;</li>
+          <li>Attempts to bypass content safety filters.</li>
+        </ul>
         <p className={textClass}>
-          E proibido usar o NUL para praticas ilegais, fraude, violacao de propriedade intelectual, assedio, odio,
-          violencia, exploracao sexual ou qualquer conteudo vedado por lei ou politicas da plataforma.
+          The App employs automated content filtering. Violations may result in content rejection, account suspension, or permanent termination without refund.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">6. UGC, moderacao, remocao e bloqueio</h2>
+        <h2 className="text-2xl font-semibold">6. User Content and Intellectual Property</h2>
         <p className={textClass}>
-          Podemos analisar, restringir, remover conteudo e bloquear contas para proteger usuarios e cumprir regras.
-          Denuncias podem ser feitas no app ou via {company.supportEmail}. Consulte a pagina de <Link href="/safety" className="text-gold underline underline-offset-4">Seguranca e UGC</Link>.
+          Content generated through the App is licensed to you for personal and commercial use, subject to these Terms. You acknowledge that AI-generated content may have limitations and should not be represented as human-created work without disclosure. NUL and its branding, logos, and interface design are the intellectual property of the developer.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">7. Propriedade intelectual do NUL</h2>
+        <h2 className="text-2xl font-semibold">7. Content Moderation (UGC)</h2>
         <p className={textClass}>
-          O app, marcas, design, codigo, interfaces e demais ativos do NUL sao protegidos por direitos de propriedade
-          intelectual e pertencem a {company.name} ou licenciantes.
+          We may analyze, restrict, remove content and block accounts to protect users and enforce our policies. Reports can be submitted through the App or via {company.supportEmail}. See our <Link href="/safety" className="text-gold underline underline-offset-4">Safety & UGC Policy</Link>.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">8. Pagamentos, assinaturas e reembolsos</h2>
+        <h2 className="text-2xl font-semibold">8. Third-Party Services</h2>
         <p className={textClass}>
-          Planos pagos podem renovar automaticamente conforme ciclo contratado. Cancelamentos e reembolsos, quando
-          aplicaveis, seguem as regras da App Store e provedores de pagamento. Valores e beneficios podem ser atualizados
-          com aviso previo razoavel.
+          The App utilizes third-party AI service providers for content generation. These providers have their own terms and content policies that apply in addition to these Terms. Generated content URLs are temporary and expire approximately 14 days after creation.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">9. Isencao de garantias</h2>
+        <h2 className="text-2xl font-semibold">9. Privacy</h2>
         <p className={textClass}>
-          O NUL e fornecido &quot;como esta&quot; e &quot;conforme disponivel&quot;, sem garantias de disponibilidade ininterrupta, ausencia
-          de erros ou adequacao a objetivos especificos.
+          Your use of the App is also governed by our <Link href="/legal/privacy" className="text-gold underline underline-offset-4">Privacy Policy</Link>. We collect minimal personal data (Apple ID identifier, optional name and email). Prompts and generated content metadata may be processed by our AI service providers.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">10. Limitacao de responsabilidade</h2>
+        <h2 className="text-2xl font-semibold">10. Disclaimer of Warranties</h2>
         <p className={textClass}>
-          Na maxima extensao permitida por lei, {company.name} nao responde por danos indiretos, lucros cessantes,
-          perda de dados ou danos emergentes relacionados ao uso do NUL.
+          The App is provided &quot;as is&quot; without warranties of any kind. We do not guarantee that generated content will meet your expectations, be error-free, or be available without interruption.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">11. Rescisao</h2>
+        <h2 className="text-2xl font-semibold">11. Limitation of Liability</h2>
         <p className={textClass}>
-          Podemos suspender ou encerrar acesso em caso de violacao destes Termos, risco de seguranca ou exigencia legal.
-          Voce pode interromper o uso a qualquer momento.
+          To the maximum extent permitted by law, {company.name} shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the App, including but not limited to loss of data, revenue, or profits.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">12. Lei aplicavel e foro</h2>
+        <h2 className="text-2xl font-semibold">12. Account Termination</h2>
         <p className={textClass}>
-          Estes Termos sao regidos pela legislacao brasileira. Foro: <strong>comarca a definir</strong>, salvo competencia
-          legal obrigatoria diversa.
+          We reserve the right to suspend or terminate your account at any time for violation of these Terms, without prior notice and without refund of unused credits.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">13. Contato e reclamacoes</h2>
+        <h2 className="text-2xl font-semibold">13. Changes to Terms</h2>
         <p className={textClass}>
-          Controlador (LGPD): {company.name}. Canal de contato, suporte e reclamacoes: {company.supportEmail}.
+          We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the updated Terms. Material changes will require re-acceptance within the App.
+        </p>
+      </div>
+
+      <div className={sectionClass}>
+        <h2 className="text-2xl font-semibold">14. Governing Law</h2>
+        <p className={textClass}>
+          These Terms are governed by the laws of the Federative Republic of Brazil. Any disputes shall be resolved in the courts of the State of Parana, Brazil.
+        </p>
+      </div>
+
+      <div className={sectionClass}>
+        <h2 className="text-2xl font-semibold">15. Contact</h2>
+        <p className={textClass}>
+          For questions about these Terms, contact us at {company.supportEmail}.
         </p>
       </div>
     </section>

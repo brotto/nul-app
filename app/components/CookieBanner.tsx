@@ -95,22 +95,13 @@ export function CookieBanner() {
         <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/25 bg-surface/95 px-4 py-4 backdrop-blur">
           <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <p className="text-sm text-muted">
-              Usamos cookies essenciais e opcionais para melhorar sua experiencia. Veja nossa {" "}
-              <Link href="/legal/cookies" className="text-gold underline underline-offset-4">
-                Politica de Cookies
-              </Link>
-              .
+              We use essential and optional cookies to improve your experience. See our{" "}
+              <Link href="/legal/cookies" className="text-gold underline underline-offset-4">Cookie Policy</Link>.
             </p>
             <div className="flex flex-wrap gap-2">
-              <button onClick={acceptAll} className="rounded-lg bg-gold px-3 py-2 text-sm font-semibold text-black">
-                Aceitar
-              </button>
-              <button onClick={rejectAll} className="rounded-lg border border-gold/40 px-3 py-2 text-sm text-text">
-                Rejeitar
-              </button>
-              <button onClick={() => setShowModal(true)} className="rounded-lg border border-gold/40 px-3 py-2 text-sm text-text">
-                Gerenciar
-              </button>
+              <button onClick={acceptAll} className="rounded-lg bg-gold px-3 py-2 text-sm font-semibold text-black">Accept</button>
+              <button onClick={rejectAll} className="rounded-lg border border-gold/40 px-3 py-2 text-sm text-text">Reject</button>
+              <button onClick={() => setShowModal(true)} className="rounded-lg border border-gold/40 px-3 py-2 text-sm text-text">Manage</button>
             </div>
           </div>
         </div>
@@ -119,39 +110,25 @@ export function CookieBanner() {
       {showModal ? (
         <div className="fixed inset-0 z-[60] grid place-items-center bg-black/75 p-4">
           <div className="w-full max-w-md rounded-2xl border border-gold/30 bg-surface p-5">
-            <h2 className="text-lg font-semibold text-text">Preferencias de Cookies</h2>
-            <p className="mt-2 text-sm text-muted">Essenciais sempre ativos. Gerencie os opcionais:</p>
+            <h2 className="text-lg font-semibold text-text">Cookie Preferences</h2>
+            <p className="mt-2 text-sm text-muted">Essential cookies are always active. Manage optional cookies below:</p>
             <div className="mt-4 space-y-3">
               <label className="flex items-center justify-between rounded-lg border border-gold/20 p-3">
-                <span className="text-sm text-text">Essenciais</span>
-                <span className="text-xs text-muted">Sempre ativo</span>
+                <span className="text-sm text-text">Essential</span>
+                <span className="text-xs text-muted">Always active</span>
               </label>
               <label className="flex items-center justify-between rounded-lg border border-gold/20 p-3">
-                <span className="text-sm text-text">Analiticos</span>
-                <input
-                  type="checkbox"
-                  checked={analytics}
-                  onChange={(event) => setAnalytics(event.target.checked)}
-                  className="h-4 w-4 accent-gold"
-                />
+                <span className="text-sm text-text">Analytics</span>
+                <input type="checkbox" checked={analytics} onChange={(event) => setAnalytics(event.target.checked)} className="h-4 w-4 accent-gold" />
               </label>
               <label className="flex items-center justify-between rounded-lg border border-gold/20 p-3">
                 <span className="text-sm text-text">Marketing</span>
-                <input
-                  type="checkbox"
-                  checked={marketing}
-                  onChange={(event) => setMarketing(event.target.checked)}
-                  className="h-4 w-4 accent-gold"
-                />
+                <input type="checkbox" checked={marketing} onChange={(event) => setMarketing(event.target.checked)} className="h-4 w-4 accent-gold" />
               </label>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
-              <button onClick={savePreferences} className="rounded-lg bg-gold px-3 py-2 text-sm font-semibold text-black">
-                Salvar preferencias
-              </button>
-              <button onClick={() => setShowModal(false)} className="rounded-lg border border-gold/40 px-3 py-2 text-sm text-text">
-                Fechar
-              </button>
+              <button onClick={savePreferences} className="rounded-lg bg-gold px-3 py-2 text-sm font-semibold text-black">Save preferences</button>
+              <button onClick={() => setShowModal(false)} className="rounded-lg border border-gold/40 px-3 py-2 text-sm text-text">Close</button>
             </div>
           </div>
         </div>

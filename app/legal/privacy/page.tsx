@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { company, legalEffectiveDate } from "@/app/lib/content";
 
 export const metadata: Metadata = {
-  title: "Politica de Privacidade | NUL",
-  description: "Politica de Privacidade do NUL em conformidade com a LGPD."
+  title: "Privacy Policy | NUL",
+  description: "Privacy Policy for NUL — data collection, usage, third-party sharing, and your rights."
 };
 
 const sectionClass = "mt-8 space-y-3";
@@ -12,89 +13,91 @@ const textClass = "text-sm text-muted leading-7";
 export default function PrivacyPage() {
   return (
     <section className="section-shell max-w-4xl">
-      <h1 className="text-4xl font-semibold">Politica de Privacidade</h1>
-      <p className="mt-4 text-sm text-muted">Ultima atualizacao: {legalEffectiveDate}</p>
-      <p className="mt-2 text-sm text-muted">Controlador de dados (LGPD): {company.name}</p>
+      <h1 className="text-4xl font-semibold">Privacy Policy</h1>
+      <p className="mt-4 text-sm text-muted">Last updated: {legalEffectiveDate}</p>
+      <p className="mt-2 text-sm text-muted">Data controller: {company.name}</p>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">1. Contato do controlador e privacidade</h2>
+        <h2 className="text-2xl font-semibold">1. Contact</h2>
         <p className={textClass}>
-          Publico geral, suporte e privacidade: {company.supportEmail}. DPO/encarregado: contato inicial pelo mesmo
-          canal, com encaminhamento interno conforme natureza da solicitacao.
+          For privacy inquiries, support, and data subject requests: {company.supportEmail}.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">2. Dados que coletamos</h2>
+        <h2 className="text-2xl font-semibold">2. Data We Collect</h2>
         <p className={textClass}>
-          Podemos coletar dados de cadastro, uso da conta, conteudos enviados para geracao, logs tecnicos,
-          diagnosticos, informacoes de dispositivo e dados de cobranca quando houver assinatura.
+          We collect minimal personal data required to operate the service:
+        </p>
+        <ul className="list-disc pl-6 text-sm text-muted leading-7 space-y-1">
+          <li>Apple ID identifier (for authentication);</li>
+          <li>Optional name and email (if provided via Sign in with Apple);</li>
+          <li>Prompts and content metadata submitted for AI generation;</li>
+          <li>Device information and technical logs for diagnostics;</li>
+          <li>Billing information processed by Apple for In-App Purchases.</li>
+        </ul>
+      </div>
+
+      <div className={sectionClass}>
+        <h2 className="text-2xl font-semibold">3. How We Use Your Data</h2>
+        <p className={textClass}>
+          We process data to provide the service (content generation, account management), ensure security and prevent abuse, improve our product, and comply with legal obligations. For non-essential cookies and marketing communications, we rely on your consent.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">3. Finalidades e bases legais (LGPD)</h2>
+        <h2 className="text-2xl font-semibold">4. Data Sharing</h2>
         <p className={textClass}>
-          Tratamos dados para executar contrato (prestacao do servico), atender interesses legitimos (seguranca,
-          prevencao a fraude e melhoria de produto) e com consentimento quando exigido, especialmente para cookies nao
-          essenciais e comunicacoes de marketing.
+          We share data with infrastructure providers, AI service providers (for content generation), analytics tools, and payment processors — strictly as necessary to operate NUL, under contractual confidentiality and security obligations.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">4. Compartilhamento de dados</h2>
+        <h2 className="text-2xl font-semibold">5. International Transfers</h2>
         <p className={textClass}>
-          Compartilhamos com provedores de infraestrutura, analytics, suporte, processamento de pagamentos e parceiros
-          tecnicos estritamente necessarios para operar o NUL, sob obrigacoes contratuais de confidencialidade e
-          seguranca.
+          Some of our service providers may process data outside of Brazil. In such cases, we adopt appropriate safeguards and legal bases for international data transfers.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">5. Transferencia internacional</h2>
+        <h2 className="text-2xl font-semibold">6. Data Retention and Deletion</h2>
         <p className={textClass}>
-          Alguns fornecedores podem processar dados fora do Brasil. Nesses casos, adotamos medidas de protecao e bases
-          legais adequadas para transferencia internacional.
+          We retain data for as long as necessary to fulfill the purposes described above, comply with legal obligations, and exercise our legal rights. Upon valid request, we may delete or anonymize your data where applicable.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">6. Retencao e exclusao</h2>
+        <h2 className="text-2xl font-semibold">7. Your Rights</h2>
         <p className={textClass}>
-          Mantemos dados pelo periodo necessario para cumprir finalidades, obrigacoes legais e exercicio regular de
-          direitos. Mediante solicitacao valida, podemos excluir ou anonimizar dados quando aplicavel.
+          Depending on your jurisdiction, you may have rights including: access to your data, correction, deletion, portability, restriction of processing, and withdrawal of consent. To exercise these rights, contact {company.supportEmail}.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">7. Direitos do titular (LGPD)</h2>
+        <h2 className="text-2xl font-semibold">8. Information Security</h2>
         <p className={textClass}>
-          Voce pode solicitar confirmacao de tratamento, acesso, correcao, portabilidade, anonimização, bloqueio,
-          eliminacao, informacoes sobre compartilhamento e revogacao de consentimento. Para exercer direitos, contate {company.supportEmail}.
+          We employ technical and organizational measures to protect against unauthorized access, loss, alteration, and improper disclosure of personal data.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">8. Seguranca da informacao</h2>
+        <h2 className="text-2xl font-semibold">9. Children</h2>
         <p className={textClass}>
-          Adotamos medidas tecnicas e organizacionais para reduzir riscos de acesso nao autorizado, perda, alteracao e
-          divulgacao indevida de dados.
+          The App is not directed at children under 17. We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact {company.supportEmail}.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">9. Criancas e adolescentes</h2>
+        <h2 className="text-2xl font-semibold">10. Cookies</h2>
         <p className={textClass}>
-          O servico nao e direcionado a criancas. Quando houver conteudo sensivel, aplicamos mecanismos de restricao por
-          idade declarada ou verificada, conforme disponibilidade tecnica.
+          Our website uses cookies. For details on what cookies we use and how to manage your preferences, see our <Link href="/legal/cookies" className="text-gold underline underline-offset-4">Cookie Policy</Link>.
         </p>
       </div>
 
       <div className={sectionClass}>
-        <h2 className="text-2xl font-semibold">10. Atualizacoes desta politica</h2>
+        <h2 className="text-2xl font-semibold">11. Changes to This Policy</h2>
         <p className={textClass}>
-          Podemos atualizar esta politica para refletir mudancas legais, tecnicas ou operacionais. A versao vigente
-          estara sempre nesta pagina com data de atualizacao.
+          We may update this policy to reflect legal, technical, or operational changes. The current version will always be available on this page with the last updated date.
         </p>
       </div>
     </section>

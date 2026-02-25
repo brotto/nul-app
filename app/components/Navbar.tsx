@@ -9,23 +9,12 @@ export function Navbar() {
           <span className="text-xl font-semibold text-gold">∅</span>
           <span className="text-sm font-semibold tracking-[0.2em]">NUL</span>
         </Link>
-        <nav aria-label="Principal" className="hidden gap-5 md:flex">
+        <nav aria-label="Main" className="hidden gap-5 md:flex">
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-sm text-muted transition hover:text-text"
-            >
-              {link.label}
-            </Link>
+            <Link key={link.label} href={link.href} className="text-sm text-muted transition hover:text-text">{link.label}</Link>
           ))}
         </nav>
-        <Link
-          href="/support"
-          className="rounded-lg border border-gold/40 px-3 py-2 text-xs font-medium text-text transition hover:border-gold"
-        >
-          Contato
-        </Link>
+        <Link href="/support" className="rounded-lg border border-gold/40 px-3 py-2 text-xs font-medium text-text transition hover:border-gold">Contact</Link>
       </div>
     </header>
   );

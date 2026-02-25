@@ -3,7 +3,7 @@ import { FaqAccordion } from "@/app/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "FAQ | NUL",
-  description: "Perguntas frequentes sobre criacao, moderacao e privacidade no NUL."
+  description: "Frequently asked questions about creating, moderation, and privacy in NUL."
 };
 
 export default function FaqPage() {
@@ -11,11 +11,9 @@ export default function FaqPage() {
     <section className="section-shell">
       <h1 className="text-4xl font-semibold">FAQ</h1>
       <p className="mt-3 max-w-2xl text-sm text-muted">
-        Respostas objetivas sobre produto, seguranca, privacidade e regras de uso.
+        Answers to common questions about the product, safety, privacy, and usage guidelines.
       </p>
-      <div className="mt-8">
-        <FaqAccordion />
-      </div>
+      <div className="mt-8"><FaqAccordion /></div>
     </section>
   );
 }

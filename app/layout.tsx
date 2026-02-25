@@ -6,16 +6,16 @@ import { Navbar } from "@/app/components/Navbar";
 import { ConsentScriptLoader } from "@/app/components/ConsentScriptLoader";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nul.brotto.io"),
-  title: "NUL (∅) | Estudio de criacao multimodal por IA",
+  metadataBase: new URL("https://nul-app.app"),
+  title: "NUL (∅) | AI-Powered Multimodal Creative Studio",
   description:
-    "Do nada, tudo. Crie videos, imagens, audios e transcricoes com IA em um unico estudio.",
+    "From nothing, everything. Generate videos, images, audio, and transcriptions with AI in one studio.",
   openGraph: {
     title: "NUL (∅)",
     description:
-      "Crie videos, imagens, audios e transcricoes com IA em um unico estudio.",
+      "Generate videos, images, audio, and transcriptions with AI in one studio.",
     type: "website",
-    url: "https://nul.brotto.io",
+    url: "https://nul-app.app",
     siteName: "NUL",
     images: [{ url: "/logo.png", width: 1200, height: 630, alt: "NUL" }]
   },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NUL (∅)",
     description:
-      "Crie videos, imagens, audios e transcricoes com IA em um unico estudio.",
+      "Generate videos, images, audio, and transcriptions with AI in one studio.",
     images: ["/logo.png"]
   }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <body className="bg-bg text-text antialiased">
         <ConsentScriptLoader />
         <div className="gold-gradient min-h-screen bg-gold-grid bg-[length:36px_36px]">
